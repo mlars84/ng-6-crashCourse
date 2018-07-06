@@ -1,3 +1,15 @@
-<p>
-  {{ user }}
-</p>
+<h2>{{ user$.name }}</h2>
+
+<ul>
+  <li>
+    Username: 
+    {{ user$.username }}
+  </li>
+  <li>
+    Address:
+    {{ user$.address.street }}
+    {{ user$.address.suite }}
+    {{ user$.city }}
+    {{ user$.zipcode }}
+  </li>
+</ul>

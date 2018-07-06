@@ -10,16 +10,16 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class DetailsComponent implements OnInit {
   user$: Object;
-  userId$: String;
+  // userId$: String;
 
   constructor(private data: DataService, private route: ActivatedRoute) { 
     this.route.params.subscribe(params => {
-      this.userId$ = params.id
+      this.user$ = params.id
     });
   }
-
+ 
   ngOnInit() {
-    this.data.getUserById(this.userId$).subscribe(
+    this.data.getUserById(this.user$).subscribe(
       data => this.user$ = data
     )
   }

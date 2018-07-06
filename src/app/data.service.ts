@@ -17,10 +17,10 @@ export class DataService {
   }
 
   getUserById(id) {
-    return this.http.get(`https://jsonplaceholder.typicode.com/users?id=${id}`)
+    return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`)
   }
 
   getPostByUserId(userId) {
-    return this.http.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+    return this.http.get(`https://jsonplaceholder.typicode.com/posts/${userId}`)
   }
 }
